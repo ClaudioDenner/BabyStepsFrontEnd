@@ -66,3 +66,9 @@ div ul li:hover{
 #typehead{
     display: none;
 }
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    color: #555555;
+}
