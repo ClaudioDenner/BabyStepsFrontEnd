@@ -15,9 +15,9 @@
     uma estilização na pseudo classe :focus.
     Tive que setar dentro desta pseudo classe do elemento a propriedade:
     
-    <ul>
-    <li> outline: 0; </li>
-    </ul>
+    
+    [x] outline: 0; 
+    
 
 <h1>Desafio 2 - </h1>
 
