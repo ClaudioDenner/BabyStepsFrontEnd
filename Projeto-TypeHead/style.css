@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+
+}
+body{
+    background-color: #F5F6F7;
+}
+
+div{
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 20px;
+    border: solid 2px #d5d6d6;
+    border-radius: 5px;
+    width: 80%;
+    min-height: 30px;
+    background-color: #fff;
+    padding: 0px 10px 0px 10px;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.123);
+}
+
+div input{
+    border:none;
+    flex-shrink: 2;
+    min-width: 90%;
+    height: 100%;
+    color: #555555;
+
+}
+
+/* removendo estilização default do input quando em focus*/ 
+div input:focus{
+    outline: 0;
+}
+
+div i{
+    cursor: pointer;
+}
+
+div ul{
+    width: 100%;
+    padding: 10px;
+}
+
+div ul li{
+    list-style: none;
+    color: #555555;
+    height: 30px;
+    padding-left: 5px;
+    
+}
+div ul li:hover{
+    border-radius: 5px;
+    background-color: #4991E3;
+    color: #ffff;
+    cursor: pointer;
+
+
+    
+}
+#typehead{
+    display: none;
+}

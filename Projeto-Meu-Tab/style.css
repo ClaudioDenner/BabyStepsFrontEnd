@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif
+}
+body{
+    background-color: #131313;
+}
+
+
+.nav{
+    display: flex;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.nav li{
+    list-style: none;
+    width: 276px;
+    height: 62px;
+    margin-right: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffff;
+    background-color:#191818;
+    margin-left: 34px;
+    
+    
+}
+    
+    .off{
+        display: flex;
+    }
+
+
+
+    .nav li:nth-child(1):not(.off){
+        margin-left: 34px;
+        background-color: #EDCA13;
+        color: black;
+        
+    }
+    .nav li:nth-child(2):not(.off){
+        background-color: #44D05A;
+        color: black;
+    
+    }
+    .nav li:nth-child(3):not(.off){
+        background-color: #02AF1E;
+        color: black;
+    
+    }
+
+
+
+main{
+    display: flex;
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+
+.content{
+    width: 100%;
+    background-color: aliceblue;
+    height: 500px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.active{
+    display: flex;
+}
+
+.content:nth-child(1){
+background-color: #EDCA13;
+
+}
+
+.content:nth-child(2){
+    background-color:#44D05A;
+}
+
+.content:nth-child(3){
+    background-color: #02AF1E;
+ 
+
+}
+
+.content-img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-img img{
+    
+    width: 350px;
+    
+}
+
+.content-text{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+
+    
+
+
+}
+
+.content-text p {
+    padding: 30px;
+    text-align:justify;
+    font-weight: bold;
+}
+
+
+@media(max-width: 768px){
+
+    .nav li{
+        width: 33%;
+        font-size: 60%;
+
+
+    }
+
+    .content{
+        flex-direction: column;
+        overflow: hidden;
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .content-img{
+        width: 100%;
+    }
+    .content-img img{
+        width: 50% ;
+    }
+
+    .content-text{
+        width: 100%;
+    }
+}
