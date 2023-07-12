@@ -1,4 +1,4 @@
-# Baby Steps FrontEnd
+# My Playground
 
 Projetos desenvolvidos em HTML, CSS e JS:
 
