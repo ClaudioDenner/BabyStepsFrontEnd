@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro </title>
+    <style>
+        .container{
+            
+            display: flex;
+            background-color: #fff;
+            width: 100%;
+            height: 300px;
+            flex-direction: column;
+            align-items: center;
+
+        
+        }
+        .title{font-size: 45px; padding-top: 30px;}
+        .clock{font-size: 100px; }
+        .buttons{
+            margin:5px; width:25%;background-color: rgb(255, 184, 184); text-align: center;border-radius: 4px;
+
+
+        }
+        .buttons:hover{background-color: rgb(252, 141, 141);}
+        .ass{text-align: center;}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title">Cronômetro</div>
+    <div id="tempo" class="clock">0:00:000</div>
+    <div id="play" class="buttons">PLAY</div>
+    <div id="pause" class="buttons">PAUSE</div>
+    <div id="zerar" class="buttons">ZERAR</div>
+</div>
+
+<footer class="ass">By: Claudio Denner</footer>
+    <script>
+
+        var tempo = document.getElementById('tempo');
+        var button1 = document.getElementById('play');
+        var button2 = document.getElementById('pause');
+        var button3 = document.getElementById('zerar');
+
+        button1.addEventListener('click', play);
+        button2.addEventListener('click', pause);
+        button3.addEventListener('click', limpar);
+        var ml = 0;
+        var ligado = false;
+
+        
+        
+
+        function Cronometro(tempo, button1, button2, ml, ligado){
+
+            this.tempo = tempo;
+            this.button1 = button1;
+            this.button2 = button2;
+
+            this.ml = ml;
+
+            this.temporizador = 0;
+            this.ligado = ligado;
+            
+
+        }
+
+        Cronometro.prototype = {
+            start: function(){
+                this.ml = 0;
+                this.temporizador ="";
+
+                this.intervalo = setInterval(tictoc,8);
+
+                function tictoc(){
+                    this.temporizador = new Date(this.ml);
+                    
+                    
+
+
+                    this.tempo.innerText = this.temporizador.getMinutes()+":"+this.temporizador.getSeconds()+":"+this.temporizador.getMilliseconds();
+                    this.ml+=10;
+                    
+
+                }
+
+
+            },
+
+            stop: function(){
+
+                clearInterval(this.intervalo);
+
+
+            },
+            zerar: function(){
+                
+                this.stop();
+                this.temporizador = 0
+                
+                this.ml = 0;
+                var temporizador = new Date(this.ml);
+                this.tempo.innerText = "0:00:000"
+                
+
+            }
+
+
+
+        }
+
+        var teste = new Cronometro(tempo, button1, button2);
+        
+
+        function play(){
+
+            if(ligado==false){teste.start(); ligado=true;}
+            else {}            
+        }
+
+        function pause(){
+            teste.stop();
+            ligado = false;
+
+        }
+
+        function limpar(){
+            ml = 0;
+            teste.zerar();
+            ligado = false;
+            
+
+
+        }
+
+      
+
+
+        
+    </script>
+    
+</body>
+</html>

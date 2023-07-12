@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <div class="container">
+        <h1>Cronômetro</h1>
+        <div class="timer" id="timer">
+            <div class="timer-values">
+                <div class="minute" id="minute">00</div>
+                <div class="separator" id="separ">:</div>
+                <div class="second" id="second">00</div>
+                <div class="separator" id="separ">:</div>
+                <div class="milisecond" id="milisecond">00</div>
+            </div>
+        </div>
+        <div class="buttons" id="buttons">
+            <div class="btStart" id="btStart" onclick="on()">Start</div>
+            <div class="btPause" id="btPause" onclick="off()">Pause</div>
+            <div class="btReset" id="btReset" onclick="reset()">Reset</div>
+        </div>
+
+        <div class="historic" id="historic">
+
+                <ul id="lista">
+                    
+                </ul>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+    <footer class="footer">
+        By:Claudio Denner<br>
+        <a href="https://cdenner.com.br/" target="_blank">https://cdenner.com.br/</a><br>
+        <a href="https://www.linkedin.com/in/claudio-denner-12b467254/" target="_blank">Linkedin</a><br>
+        <a href="https://github.com/ClaudioDenner/Cronometro-com-js" target="_blank">Repositório GitHub</a><br>
+    </footer>
+
+    <script src="cronometro.js"></script>
+    
+</body>
+</html>
