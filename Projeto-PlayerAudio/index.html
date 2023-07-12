@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="infos">
+            
+            <div class="infos-file">
+                <div id="title"></div> 
+
+                <audio  id="audio">
+                   
+                </audio> 
+
+            
+              
+                 
+               
+                
+            </div>
+            
+            <div class="directory">
+
+                <ul>
+                    <li class="ficheiro" onclick="ficheiroValor('Bita.mp3')">Bita.mp3</li>
+                    <li class="ficheiro" onclick="ficheiroValor('HorseNoName.mp3')">Horse no Name.mp3</li>
+                </ul>
+              
+               
+          
+                
+
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="bottom">
+
+        <div class="controls">
+            <div class="percent" id="percent">
+
+                <div class="barra-progress" id="barra-progress"></div>
+                
+                
+            </div>
+            <div class="ButtonController">
+                <span class="material-symbols-outlined" id="back" onclick="recuar()">skip_previous</span>
+                <span class="material-symbols-outlined" id="play" onclick="play()">play_arrow</span>
+                <span class="material-symbols-outlined" id="next" onclick="avancar()">skip_next</span>
+                <div class="volume-area" id="area-volume">
+                    <div class="volume" id="volume"></div>
+                </div>
+                <span class="material-symbols-outlined" onclick="activeButtonVolume()">volume_up</span>
+                
+            </div>
+        </div>
+
+    </div>
+    
+    
+    
+    <script src="player2.0.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+*{margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+
+
+body{background-color: #353535ff;}
+a{text-decoration: none;}
+ul{list-style:  none;}
+img {max-width: 100%;}
+
+.container{width:100%;height:100%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+
+@media screen and (max-width: 768px) {
+
+    .container{height: 568px;}
+
+    .infos{width: 100%;height: 100%; display: flex;}
+        .infos-file{width: 100%; background-image: url('https://www.freeiconspng.com/uploads/music-note-icon-25.png'); background-size: 60%; background-repeat: no-repeat; background-position: center; display: flex; align-items: flex-start; justify-content: center; margin-top: 20px;}
+        .infos-file div{padding-bottom: 7px;color:rgb(218, 218, 218)}
+   
+        
+        .directory{display: none;}
+
+
+        .bottom{position: fixed; bottom: 0px;width: 100%;}    
+        .controls{width: 100%; display: flex; flex-direction: column;align-items: center;}
+        .percent{width: 99%; height: 15px; background-color: rgb(37, 34, 34);}
+        .barra-progress{width: 0%; height: 7px; background-color: rgb(236, 44, 44);transition: 0.5s;}
+        .barra-progress:hover{height: 12px;transition: 0.5s;}
+        .ButtonController{color: #ffff;display: flex; justify-content:space-around; align-items:center; width: 100%;padding: 3px; height: 120px;}
+        .material-symbols-outlined{width: 33%; text-align: center; height:110px;background-color: rgb(37, 34, 34);padding-top: 43px;}
+        .material-symbols-outlined:hover{background-color:rgb(20, 17, 17);}
+    
+
+        .volume-area{
+            background-color: rgb(100, 98, 98);
+          
+            width: 40px;
+            height: 300px;
+            position: fixed;
+            right: 1%;
+            bottom: 25%;
+            overflow: hidden;
+            display: none;
+        }
+    
+        .volume{
+            width: 100%;
+            background-color: red;
+            height: 150px;
+            position:absolute;
+            bottom: 0%;
+        }
+        
+        .title{
+            font-size: 1.8rem;
+        }
+   }
+
+   @media screen and (min-width: 768px) {
+
+    .container{height: 568px;}
+
+    .infos{width: 100%;height: 100%; display: flex;}
+        .infos-file{width: 30%; background-image: url('https://www.freeiconspng.com/uploads/music-note-icon-25.png'); background-size: 80%; background-repeat: no-repeat; background-position: center; display: flex; align-items: flex-end; justify-content: center;box-shadow: 5px 0px #888888; margin-top: 20px; margin-bottom: 50px;}
+        .infos-file div{padding-bottom: 12px;color:rgb(218, 218, 218)}
+   
+        
+        .directory{display: block; width: 70%; }
+        .ficheiro{color:#ffff; width: 100%; background-color: rgb(37, 34, 34); padding: 10px; margin: 5px;}
+        .ficheiro:hover{background-color:rgb(20, 17, 17);font-size: 13pt;}
+
+     .bottom{position: fixed; bottom: 0px; width: 100%;}   
+        .controls{width: 100%; display: flex; flex-direction: column;align-items: center;}
+        .percent{width: 99%; height: 15px; background-color:  rgb(37, 34, 34);}
+        .tempo{width: 100%; color: white; display: flex; justify-content:space-between;padding-left: 10px;padding-right: 10px; font-size: 0.8rem; align-items: center;}
+        .barra-progress{width: 0%; height: 15px; background-color: rgb(236, 44, 44);transition: 0.2s;}
+        .ButtonController{color: #ffff;display: flex; justify-content:space-around; align-items:center; width: 100%;padding: 3px; height: 120px;}
+        .material-symbols-outlined{width: 33%; text-align: center; height:110px;background-color: rgb(37, 34, 34);padding-top: 43px;}
+        .material-symbols-outlined:hover{background-color:rgb(20, 17, 17);}
+    
+
+    .volume-area{
+        background-color: rgb(100, 98, 98);
+      
+        width: 40px;
+        height: 300px;
+        position: fixed;
+        right: 1%;
+        bottom: 22%;
+        overflow: hidden;
+        display: none;
+    }
+
+    .volume{
+        width: 100%;
+        background-color: red;
+        height: 150px;
+        position:absolute;
+        bottom: 0%;
+    }
+    
+    .title{
+        font-size: 1.8rem;
+    }
+   }
