@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        footer{
+            width: 100%; text-align: center;margin-bottom:10px ;
+        }
+        @media(max-width: 768px){
+
+        
+        .calc{background-color: #fff; width: 100%;height: 80vh; display:flex; justify-content:center; align-items:flex-start;margin-top: 20px;}
+        .calcA{display: flex;flex-direction: column; background-color: rgb(178, 181, 187); width: 90%; height:90%; flex-wrap: wrap; align-items:center;justify-content:space-around;padding-bottom: 1%;border-radius:5px;padding: 2px;}
+        .display{width: 100%; height: 90%; background-color: rgb(245, 245, 245); border-radius: 5px; align-items: center;justify-content: center; display:flex;justify-content: space-between;overflow: hidden;}
+        
+        
+        .numeros{width: 95%; height: 80%; display: flex; flex-direction: column; flex-wrap: wrap; justify-content:space-between; align-items: center;}
+        .bt{width: 22%; height: 19%; background-color:#666666; text-align: center;border-radius: 5px;font-size: 20pt;display: flex; align-items: center; justify-content: center;color:rgb(255, 255, 255);} 
+        .bt:hover{background-color: rgb(149, 198, 238);}
+        .visor{width:98%; height: 15%;display: flex; align-items: center; justify-content: center; text-align: right;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:rgb(36, 35, 35); font-size: 16pt;}
+        .bt:nth-of-type(10){background-color:#2c2c2c}
+        .bt:nth-of-type(15){background-color:#2c2c2c}
+        .bt:nth-of-type(16){background-color:#2c2c2c}
+        .bt:nth-of-type(17){background-color:#2c2c2c}
+        .bt:nth-of-type(18){background-color:#2c2c2c}
+        .bt:nth-of-type(19){background-color:#FF6600; height: 38%;}
+
+
+
+
+
+        .bt:nth-of-type(19):hover{background-color: rgb(81, 63, 236);}
+    }
+
+    @media(min-width:769px){
+
+        .calc{background-color: #fff; width: 100%;height: 90vh; display:flex; justify-content:center; align-items:center;}
+        .calcA{display: flex;flex-direction: column; background-color: rgb(178, 181, 187); width: 40%; height:70%; flex-wrap: wrap; align-items:center;justify-content:space-around;padding-bottom: 1%;border-radius:5px;padding: 2px;}
+        .display{width: 96%; height: 90%; background-color: rgb(245, 245, 245); border-radius: 5px; align-items: center;justify-content: center; display:flex;justify-content: space-between;overflow: hidden;}
+        
+        
+        .numeros{width: 95%; height: 80%; display: flex; flex-direction: column; flex-wrap: wrap; justify-content:space-between; align-items: center;}
+        .bt{width: 22%; height: 19%; background-color:#666666; text-align: center;border-radius: 5px;font-size: 20pt;display: flex; align-items: center; justify-content: center;color:rgb(255, 255, 255);} 
+        .bt:hover{background-color: rgb(149, 198, 238);}
+        .visor{width:98%; height: 15%;display: flex; align-items: center; justify-content: center; text-align: right;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:rgb(36, 35, 35); font-size: 16pt;}
+        .bt:nth-of-type(10){background-color:#2c2c2c}
+        .bt:nth-of-type(15){background-color:#2c2c2c}
+        .bt:nth-of-type(16){background-color:#2c2c2c}
+        .bt:nth-of-type(17){background-color:#2c2c2c}
+        .bt:nth-of-type(18){background-color:#2c2c2c}
+        .bt:nth-of-type(19){background-color:#FF6600; height: 38%;}
+
+
+
+
+
+        .bt:nth-of-type(19):hover{background-color: rgb(81, 63, 236);}
+
+
+    }
+        
+        
+
+        
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="calc">
+        <div class="calcA">
+            <div class="visor">
+                <div class="display" id="display">
+                    <div id="demonstrativo" class="demonstrativo" style="padding: 15px; font-size: 20pt;"></div>
+                    <div style="padding: 15px">
+                        <span id="op-aux"></span>
+                        <span id="valor1">0</span>
+                        <span id="operador"></span>
+                        <span id="valor2"></span>
+                        <span id="igualdade"></span>
+                        <span id="resultado" style="color:black;font-size: 2rem;"></span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="numeros">
+                <div class="bt" id="reset">CE</div>
+                <div class="bt" id="7">7</div>
+                <div class="bt" id="4">4</div>
+                <div class="bt" id="1">1</div>
+                <div class="bt" id="0">0</div>
+                <div class="bt" id="parenteseAbertura">(</div>
+                <div class="bt" id="8">8</div>
+                <div class="bt" id="5">5</div>
+                <div class="bt" id="2">2</div>
+                <div class="bt" id=".">.</div>
+                <div class="bt" id="paremteseFechamento">)</div>
+                <div class="bt" id="9">9</div>
+                <div class="bt" id="6">6</div>
+                <div class="bt" id="3">3</div>
+                <div class="bt" id="=">=</div>
+                <div class="bt" id="÷">÷</div>
+                <div class="bt" id="x">x</div>
+                <div class="bt" id="-">-</div>
+                <div class="bt"id='+'>+</div>
+                
+            </div>
+            
+                
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        By:Claudio Denner<br>
+        <a href="https://cdenner.com.br/" target="_blank">https://cdenner.com.br/</a><br>
+        <a href="https://www.linkedin.com/in/claudio-denner-12b467254/" target="_blank">Linkedin</a><br>
+        <a href="https://github.com/ClaudioDenner/Calculadora-com-Js" target="_blank">Repositório GitHub</a><br>
+
+    
+    </footer>
+    <script>
+
+
+
+
+    //eval - interpreta uma string como sendo uma expressão matemática
+    //concat - concatenar valor a uma string
+    var ultimoValorDigitado
+    let valor1Display = document.getElementById('valor1')
+    var resultado = document.getElementById('resultado') 
+    valor1Display.innerHTML =""
+    
+       //operadores
+        var mais = document.getElementById('+');
+        var menos = document.getElementById('-');
+        var multiplicacao = document.getElementById('x');
+        var divisao = document.getElementById('÷');
+        var igual = document.getElementById('=');
+        var reset = document.getElementById('reset');
+        var parenteseAbertura = document.getElementById('parenteseAbertura');
+        var paremteseFechamento = document.getElementById('paremteseFechamento');
+       // var demonstrativo = document.getElementById('demonstrativo');
+    
+
+        var write = (valor)=>{
+           valor1Display.innerHTML = valor1Display.innerHTML+valor
+            ultimoValorDigitado = valor
+        }
+
+        var verificacao =  (valor)=>{
+            if(ultimoValorDigitado != valor){ write(valor) } 
+        }
+
+        var result = ()=>{
+            resultado.innerHTML =  " = "+eval(valor1Display.innerHTML).toString()
+            valor1Display.innerHTML=""
+        }
+
+        var ce = ()=>{
+            valor1Display.innerHTML = "";
+            resultado.innerHTML = "";
+
+        }
+
+    //numeros
+        var zero = document.getElementById('0');
+        var um = document.getElementById('1');
+        var dois = document.getElementById('2');
+        var tres = document.getElementById('3');
+        var quatro = document.getElementById('4');
+        var cinco = document.getElementById('5');
+        var seis = document.getElementById('6');
+        var sete = document.getElementById('7');
+        var oito = document.getElementById('8');
+        var nove = document.getElementById('9');
+        var ponto = document.getElementById('.');
+    
+    
+        
+        zero.addEventListener('click',()=>{write('0')})
+        um.addEventListener('click',()=>{write('1')})
+        dois.addEventListener('click', ()=>{write('2')} )
+        tres.addEventListener('click',()=>{write('3')} )
+        quatro.addEventListener('click',()=>{write('4')} )
+        cinco.addEventListener('click',()=>{write('5')})
+        seis.addEventListener('click', ()=>{write('6')} )
+        sete.addEventListener('click',()=>{write('7')} )
+        oito.addEventListener('click',()=>{write('8')} )
+        nove.addEventListener('click', ()=>{write('9')})
+        ponto.addEventListener('click', ()=>{verificacao('.')} )
+        mais.addEventListener('click', ()=>{verificacao('+')} )
+        menos.addEventListener('click', ()=>{verificacao('-')} )
+        multiplicacao.addEventListener('click', ()=>{verificacao('*')} )
+        divisao.addEventListener('click', ()=>{verificacao('/')} )
+        parenteseAbertura.addEventListener('click', ()=>{verificacao('(')} )
+        paremteseFechamento.addEventListener('click', ()=>{verificacao(')')} )
+        igual.addEventListener('click', ()=>{result()} )
+        reset.addEventListener('click', ()=>{ce()})
+
+
+
+        
+
+        document.addEventListener('keydown', function(tecla){
+
+            switch(tecla.keyCode){
+                case 110: verificacao('.')
+                break
+                case 188: verificacao('.')
+                break
+                case 48: write('0')
+                break
+                case 96: write('0')
+                break
+                case 49: write('1')
+                break
+                case 97: write('1')
+                break
+                case 50: write('2')
+                break
+                case 98: write('2')
+                break
+                case 51: write('3')
+                break
+                case 99: write('3')
+                break
+                case 52: write('4')
+                break
+                case 100: write('4')
+                break
+                case 53: write('5')
+                break
+                case 101: write('5')
+                break
+                case 54: write('6')
+                break
+                case 102: write('6')
+                break
+                case 55: write('7')
+                break
+                case 103: write('7')
+                break
+                case 56: write('8')
+                break
+                case 104: write('8')
+                break
+                case 57: write('9')
+                break
+                case 105: write('9')
+                break
+                case 189: verificacao('-')
+                break 
+                case 109: verificacao('-')
+                break
+                case 187: verificacao('+')
+                break
+                case 107: verificacao('+')
+                break
+                case 111: verificacao('/')
+                break
+                case 193: verificacao('/')
+                break
+                case 106: verificacao('*')
+                break
+                case 8: ce();
+                break
+                case 13: result()
+                break
+                
+                 
+                
+            }
+
+        } );
+
+
+
+    
+    
+
+
+
+
+</script>   
+</body>
+</html>
