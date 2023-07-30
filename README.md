@@ -12,3 +12,4 @@ Projetos desenvolvidos em HTML, CSS e JS:
 8. Menu Tabs
 9. Slider/Carrossel
 10. TypeHead
+11. Popovers
