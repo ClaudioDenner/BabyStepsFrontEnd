@@ -182,6 +182,7 @@ body{
     
         color: transparent;
         text-align: center;
+        animation: textAnime 0.5s infinite;
        
        
         
