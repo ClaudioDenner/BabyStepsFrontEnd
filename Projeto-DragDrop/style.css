@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+.container{
+    width: 80%;
+    height: 100px;
+    margin: 10px auto 10px auto; 
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container span{
+    width: 16%;
+    height: 50px;
+    display: block;
+    margin: 2px;
+    
+    
+}
+
+.container span:hover{
+    cursor:move;
+}
